@@ -1,0 +1,12 @@
+Minimum RTO for a single AZ outage: 5 minutes. This requires starting up a new Amazon RDS instance and then applying all changes since the last backup.
+
+
+Minimum RTO for a single region outage: 10 minutes. With cross-region read replica, we can promote the replica with minimum downtime.
+
+
+Minimum RPO for a single AZ outage: 10 minutes. Data might be lost since the AZ outage starts, up to the time the Availability Zone failure occurred.
+
+
+Minimum RPO for a single region outage: 10 minutes. Again, the cross-region read replica preserves the records up till the time the outage starts.
+
+
